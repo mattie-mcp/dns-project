@@ -1,0 +1,12 @@
+options {
+         … 
+          rate-limit {
+              responses-per-second 10;
+          };
+      };
+
+
+rate-limit {
+    responses-per-second 15;
+    window 5;
+};
