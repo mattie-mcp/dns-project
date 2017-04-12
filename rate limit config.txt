@@ -1,12 +1,20 @@
-options {
-         … 
-          rate-limit {
-              responses-per-second 10;
-          };
-      };
-
-
 rate-limit {
-    responses-per-second 15;
-    window 5;
+	slip 2; // Every other response truncated
+	window 15; // Seconds to bucket
+	responses-per-second 5;// # of good responses per prefix-length/sec
+	referrals-per-second 5; // referral responses
+	nodata-per-second 5; // nodata responses
+	nxdomains-per-second 5; // nxdomain responses
+	errors-per-second 5; // error responses
+	all-per-second 20; // When we drop all
+	log-only no; // Debugging mode
+	qps-scale 250; // x / 1000 * per-second
+	 // = new drop limit
+	exempt-clients { 127.0.0.1; 192.153.154.0/24; 192.160.238.0/24 };
+	ipv4-prefix-length 24; // Define the IPv4 block size
+	ipv6-prefix-length 56; // Define the IPv6 block size
+	max-table-size 20000; // 40 bytes * this number = max memory
+	min-table-size 500; // pre-allocate to speed startup
 };
+
+https://conference.apnic.net/data/37/apricot-2014-rrl_1393309768.pdf
