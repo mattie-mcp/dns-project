@@ -18,3 +18,12 @@ rate-limit {
 };
 
 https://conference.apnic.net/data/37/apricot-2014-rrl_1393309768.pdf
+
+Other References
+https://indico.dns-oarc.net/event/0/contribution/1/material/slides/0.pdf
+https://atlas.ripe.net/measurements-and-tools/tools/
+	http://sg-pub.ripe.net/demo-area/atlas-stream/dns-instances.html
+http://www.nlnetlabs.nl/downloads/publications/report-rp2-lexis.pdf
+https://www.nlnetlabs.nl/publications/
+
+*****https://www.nlnetlabs.nl/downloads/publications/report-rrl-dekoning-rozekrans.pdf
